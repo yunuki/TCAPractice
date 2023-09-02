@@ -12,6 +12,7 @@
 		148A2ADE2AA3671600D9A5D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148A2ADD2AA3671600D9A5D9 /* Assets.xcassets */; };
 		148A2AE12AA3671600D9A5D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148A2AE02AA3671600D9A5D9 /* Preview Assets.xcassets */; };
 		148A2AE92AA3677100D9A5D9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 148A2AE82AA3677100D9A5D9 /* ComposableArchitecture */; };
+		148A2AEB2AA367AA00D9A5D9 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148A2AEA2AA367AA00D9A5D9 /* Feature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,8 @@
 		148A2ADB2AA3671400D9A5D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		148A2ADD2AA3671600D9A5D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		148A2AE02AA3671600D9A5D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		148A2AEA2AA367AA00D9A5D9 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		148A2AEC2AA36F4600D9A5D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +56,10 @@
 		148A2AD82AA3671400D9A5D9 /* TCAPractice */ = {
 			isa = PBXGroup;
 			children = (
+				148A2AEC2AA36F4600D9A5D9 /* Info.plist */,
 				148A2AD92AA3671400D9A5D9 /* TCAPracticeApp.swift */,
 				148A2ADB2AA3671400D9A5D9 /* ContentView.swift */,
+				148A2AEA2AA367AA00D9A5D9 /* Feature.swift */,
 				148A2ADD2AA3671600D9A5D9 /* Assets.xcassets */,
 				148A2ADF2AA3671600D9A5D9 /* Preview Content */,
 			);
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				148A2AEB2AA367AA00D9A5D9 /* Feature.swift in Sources */,
 				148A2ADC2AA3671400D9A5D9 /* ContentView.swift in Sources */,
 				148A2ADA2AA3671400D9A5D9 /* TCAPracticeApp.swift in Sources */,
 			);
@@ -278,6 +284,7 @@
 				DEVELOPMENT_TEAM = PX37AVLC5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +314,7 @@
 				DEVELOPMENT_TEAM = PX37AVLC5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
