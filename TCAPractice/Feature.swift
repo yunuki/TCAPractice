@@ -21,7 +21,7 @@ struct Feature: Reducer {
         case numberFactResponse(String)
     }
     
-    @Dependency(\.numberFact) var numberFact
+    let service: NumberFactService
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
@@ -36,30 +36,12 @@ struct Feature: Reducer {
             return .none
         case .numberFactButtonTapped:
             return .run { [count = state.count] send in
-                let fact = try await self.numberFact.fetch(count)
+                let fact = try await service.fetch(count)
                 await send(.numberFactResponse(fact))
             }
         case .numberFactResponse(let fact):
             state.numberFactAlert = fact
             return .none
         }
-    }
-}
-
-struct NumberFactClient {
-    var fetch: (Int) async throws -> String
-}
-
-extension NumberFactClient: DependencyKey {
-    static var liveValue = Self { number in
-        let (data, _) = try await URLSession.shared.data(from: URL(string: "http://numbersapi.com/\(number)")!)
-        return String(decoding: data, as: UTF8.self)
-    }
-}
-
-extension DependencyValues {
-    var numberFact: NumberFactClient {
-        get { self[NumberFactClient.self] }
-        set { self[NumberFactClient.self] = newValue }
     }
 }

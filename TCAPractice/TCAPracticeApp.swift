@@ -14,7 +14,7 @@ struct TCAPracticeApp: App {
         WindowGroup {
             ContentView(
                 store: StoreOf<Feature>(initialState: Feature.State(), reducer: {
-                    Feature()
+                    Feature(service: DefaultNumberFactService())
                 })
             )
         }

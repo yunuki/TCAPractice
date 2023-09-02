@@ -35,7 +35,7 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(
             store: StoreOf<Feature>(initialState: Feature.State(), reducer: {
-                Feature()
+                Feature(service: DefaultNumberFactService())
             })
         )
     }
